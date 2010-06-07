@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'blueprint_styled_content'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_content.tx_blueprintstyledcontent_span">Span</label>
+			<label index="tt_content.tx_blueprintstyledcontent_gridclass.I.0">none</label>
+			<label index="tt_content.tx_blueprintstyledcontent_gridclass.I.1">last</label>
+			<label index="tt_content.tx_blueprintstyledcontent_gridclass.I.2">border</label>
+			<label index="tt_content.tx_blueprintstyledcontent_gridclass.I.3">colborder</label>
+			<label index="tt_content.tx_blueprintstyledcontent_gridclass">Grid class</label>
+			<label index="tt_content.tx_blueprintstyledcontent_append">Append</label>
+			<label index="tt_content.tx_blueprintstyledcontent_prepend">Prepend</label>
+			<label index="tt_content.tx_blueprintstyledcontent_push">Push</label>
+			<label index="tt_content.tx_blueprintstyledcontent_pull">Pull</label>
+		</languageKey>
+	</data>
+</T3locallang>
