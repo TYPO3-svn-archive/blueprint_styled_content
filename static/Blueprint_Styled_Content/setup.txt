@@ -1,0 +1,98 @@
+tt_content.stdWrap {
+	outerWrap.cObject = COA
+	outerWrap.cObject {
+		10 = TEXT
+		10.value = <div id="tt_content_{field:uid}" class="
+		20 = TEXT
+		20 {
+			value = span-{field:tx_blueprintstyledcontent_span}
+		}
+		30 = TEXT
+		30 {
+			value = prepend-{field:tx_blueprintstyledcontent_prepend}
+			noTrimWrap = | ||
+			if {
+				value = 0
+				equals.field = tx_blueprintstyledcontent_prepend
+				negate = 1
+			}
+		}
+		40 < .30
+		40 {
+			value = append-{field:tx_blueprintstyledcontent_append}
+			if.equals.field = tx_blueprintstyledcontent_append
+		}
+		50 < .30
+		50 {
+			value = push-{field:tx_blueprintstyledcontent_push}
+			if.equals.field = tx_blueprintstyledcontent_push
+		}
+		60 < .30
+		60 {
+			value = pull-{field:tx_blueprintstyledcontent_pull}
+			if.equals.field = tx_blueprintstyledcontent_pull
+		}
+		70 = CASE
+		70 {
+			key.field = tx_blueprintstyledcontent_gridclass
+			# 0 = TEXT
+			# 0.value = 
+			1 = TEXT
+			1.value = last
+			1.noTrimWrap = | ||
+			2 = TEXT
+			2.value = border
+			2.noTrimWrap = | ||
+			3 = TEXT
+			3.value = colborder
+			3.noTrimWrap = | ||
+		}
+		80 = TEXT
+		80 {
+			value = ">|</div>
+		}
+		#stdWrap.if {
+			#value = 0
+			#equals.field = tx_blueprintstyledcontent_span
+			#negate = 1
+		#}
+	}
+	outerWrap.insertData = 1
+}
+
+lib.stdheader {
+	2 >
+	10 {
+		1.fontTag = <h1>|</h1>
+		2.fontTag = <h2>|</h2>
+		3.fontTag = <h3>|</h3>
+		4.fontTag = <h4>|</h4>
+		5.fontTag = <h5>|</h5>
+		6 < .1
+		6.fontTag = <h6>|</h6>
+	}
+	stdWrap.dataWrap = |
+	# stdWrap.if.value = 90
+}
+
+# tt_content.image.20.layout.18.value = <div class="top pull-1 left###CLASSES###">###IMAGES######TEXT###</div>
+
+tt_content.mailform {
+	20 {
+		# stdWrap.wrap = <fieldset>|</fieldset>
+		stdWrap.wrap = |
+		layout = <p>###LABEL######FIELD###</p>
+		labelWrap {
+			wrap = |<br/>
+			required = 1
+		}
+		REQ.labelWrap {
+			wrap = |*<br/>
+			required = 1
+		}
+		
+		params.input = class="text"
+		# params.submit = class="submit"
+		accessibility = 1
+	}
+}
