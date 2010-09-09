@@ -2,10 +2,11 @@ tt_content.stdWrap {
 	outerWrap.cObject = COA
 	outerWrap.cObject {
 		10 = TEXT
-		10.value = <div id="tt_content_{field:uid}" class="
+		10.value = <div id="tt_content_{field:uid}" class="tt_content
 		20 = TEXT
 		20 {
 			value = span-{field:tx_blueprintstyledcontent_span}
+			noTrimWrap = | ||
 		}
 		30 = TEXT
 		30 {
