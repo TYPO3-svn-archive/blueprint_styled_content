@@ -1,4 +1,5 @@
 tt_content.stdWrap {
+	innerWrap >
 	outerWrap.cObject = COA
 	outerWrap.cObject {
 		10 = TEXT
