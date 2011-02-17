@@ -1,15 +1,5 @@
 <?php
 
-########################################################################
-# Extension Manager/Repository config file for ext: "blueprint_styled_content"
-#
-# Auto generated 28-11-2008 02:49
-#
-# Manual updates:
-# Only the data in the array - anything else is removed by next write.
-# "version" and "dependencies" must not be touched!
-########################################################################
-
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Blueprint Styled Content',
 	'description' => 'Content styled with Blueprint CSS',
@@ -29,7 +19,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
 	'author_company' => '',
-	'version' => '0.9.1',
+	'version' => '1.0',
 	'constraints' => array(
 		'depends' => array(
 			'css_styled_content' => '',
