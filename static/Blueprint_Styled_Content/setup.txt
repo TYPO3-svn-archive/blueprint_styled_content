@@ -3,7 +3,7 @@ tt_content.stdWrap {
 	outerWrap.cObject = COA
 	outerWrap.cObject {
 		10 = TEXT
-		10.value = <div id="tt_content_{field:uid}" class="tt_content
+		10.value = <div id="c{field:uid}" class="tt_content
 		20 = TEXT
 		20 {
 			value = span-{field:tx_blueprintstyledcontent_span}
@@ -98,3 +98,21 @@ tt_content.mailform {
 		accessibility = 1
 	}
 }
+
+
+
+page.includeCSS {
+	screen = EXT:blueprint_styled_content/res/blueprint-css-1.0/blueprint/screen.css
+	screen.media = screen, projection
+	print = EXT:blueprint_styled_content/res/blueprint-css-1.0/blueprint/print.css
+	print.media = print
+	ie = EXT:blueprint_styled_content/res/blueprint-css-1.0/blueprint/ie.css
+	ie.media = screen, projection
+	ie.allWrap = <!--[if IE]>|<![endif]-->
+}
+
+page.wrap = <div class="container">|</div>
+
+[globalVar = TSFE:beUserLogin > 0] 
+page.wrap = <div class="container showgrid">|</div>
+[global]
